@@ -8,7 +8,7 @@ exports.createProduct = async (req, res) => {
     // const savedProduct = await product.findOneAndUpdate(
     //   { uniqueId: req.body.uniqueId },
     //   req.body, options);
-
+    console.log(`processing for ${req.body.uniqueId}`);
     if (req.body.uniqueId == '23810') {
       console.log(req.body);
     }
