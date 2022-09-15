@@ -39,6 +39,6 @@ if (cluster.isMaster) {
   // )
 
   app.post('/api/:site_key/upload/feed', createProduct);
-
-  app.listen(3001, () => console.log('Server is running on port 3001'));
+  const port = process.env.PORT || 3001;
+  app.listen(port, () => console.log('Server is running on port '+port));
 }
