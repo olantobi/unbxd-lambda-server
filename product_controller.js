@@ -9,6 +9,9 @@ exports.createProduct = async (req, res) => {
     //   { uniqueId: req.body.uniqueId },
     //   req.body, options);
 
+    if (req.body.uniqueId == '23810') {
+      console.log(req.body);
+    }
     res.json({ status: 'success', uploadId: uuidv4(), code: '200' });
   } catch (err) {
     console.err('Error while saving product', err);
