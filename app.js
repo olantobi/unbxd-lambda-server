@@ -1,7 +1,7 @@
 const express = require('express');
 const cluster = require('cluster');
 const totalCpus = require('os').cpus().length;
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 
 if (cluster.isMaster) {
@@ -24,19 +24,19 @@ if (cluster.isMaster) {
 
   app.use(express.json());
 
-  mongoose.connect(
-    "mongodb+srv://sunnyben:adetoberu@cluster0.gkpbm.mongodb.net/unbxd_server_flat?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }, (err) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log('Connected to Mongodb');
-      }
-    }
-  )
+  // mongoose.connect(
+  //   "mongodb+srv://sunnyben:adetoberu@cluster0.gkpbm.mongodb.net/unbxd_server_flat?retryWrites=true&w=majority",
+  //   {
+  //     useNewUrlParser: true,
+  //     useUnifiedTopology: true,
+  //   }, (err) => {
+  //     if (err) {
+  //       console.error(err);
+  //     } else {
+  //       console.log('Connected to Mongodb');
+  //     }
+  //   }
+  // )
 
   app.post('/api/:site_key/upload/feed', createProduct);
   const port = process.env.PORT || 3001;
