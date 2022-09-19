@@ -25,7 +25,7 @@ if (cluster.isMaster) {
   app.use(express.json());
 
   mongoose.connect(
-    "mongodb+srv://sunnyben:adetoberu@cluster0.gkpbm.mongodb.net/unbxd_server?retryWrites=true&w=majority",
+    "mongodb+srv://sunnyben:adetoberu@cluster0.gkpbm.mongodb.net/unbxd_server_flat?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
