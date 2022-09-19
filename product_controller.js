@@ -9,7 +9,7 @@ exports.createProduct = async (req, res) => {
     //   { uniqueId: req.body.uniqueId },
     //   req.body, options);
     const p = new product(req.body);
-    const savedProduct = await p.save();
+    await p.save();
     res.json({ status: 'success', uploadId: uuidv4(), code: '200' });
   } catch (err) {
     console.error('Error while saving product', err);
